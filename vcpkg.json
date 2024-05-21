@@ -1,0 +1,15 @@
+{
+  "name" : "yadrotesttask",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "7eb700c9688daed6d8bdcdc571ebe3eedea6a774",
+  "dependencies" : [ {
+    "name" : "libconfig",
+    "version>=" : "1.7.3#5"
+  }, {
+    "name" : "vcpkg-cmake-config",
+    "version>=" : "2022-02-06#1"
+  }, {
+    "name" : "vcpkg-cmake",
+    "version>=" : "2024-04-18"
+  } ]
+}
