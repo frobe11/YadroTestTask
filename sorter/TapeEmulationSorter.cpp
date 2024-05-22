@@ -8,13 +8,13 @@ module;
 #include <filesystem>
 #include <system_error>
 
-export module KnowingMemoryCapacitySorter;
+export module TapeEmulationSorter;
 
 import TapeEmulationController;
 import TapeMerger;
 import ConfigReader;
 
-export class KnowingMemoryCapacitySorter {
+export class TapeEmulationSorter {
 private:
     size_t _memoryCapacity;
     std::vector<TapeEmulationController> _tapes;
@@ -25,12 +25,12 @@ private:
         ofs.close();
     }
 public:
-    explicit KnowingMemoryCapacitySorter(const ConfigReader &cfg) :
+    explicit TapeEmulationSorter(const ConfigReader &cfg) :
             _memoryCapacity(cfg.getMemoryCapacity()), _tapes(), _cfg(cfg) {
         _memoryCapacity = (long long) _memoryCapacity / 8;
     }
 
-    ~KnowingMemoryCapacitySorter() = default;
+    ~TapeEmulationSorter() = default;
 
     void sortTape(std::string input, std::string output) {
         clearFile("../tapes/" + output);

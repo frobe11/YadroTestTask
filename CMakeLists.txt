@@ -20,7 +20,7 @@ target_sources(modules
         FILE_SET cxx_modules TYPE CXX_MODULES FILES
         controller/ITapeController.cpp
         controller/TapeEmulationController.cpp
-        sorter/KnowingMemoryCapacitySorter.cpp
+        sorter/TapeEmulationSorter.cpp
         sorter/TapeMerger.cpp
         config/ConfigReader.cpp
 )

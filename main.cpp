@@ -1,11 +1,11 @@
 #include <iostream>
 import TapeEmulationController;
-import KnowingMemoryCapacitySorter;
+import TapeEmulationSorter;
 import ConfigReader;
 
 int main(int argc, char** argv) {
     ConfigReader reader("../config/config.cfg");
-    KnowingMemoryCapacitySorter sorter(reader);
+    TapeEmulationSorter sorter(reader);
     std::string inputFile = argv[1];
     std::string outputFile = argv[2];
     sorter.sortTape(inputFile, outputFile);
