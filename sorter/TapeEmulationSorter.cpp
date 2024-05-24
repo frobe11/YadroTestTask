@@ -19,7 +19,7 @@ private:
     size_t _memoryCapacity;
     std::vector<TapeEmulationController> _tapes;
     const ConfigReader _cfg;
-    void clearFile(std::string filename){
+    void clearFile(const std::string& filename) const {
         std::ofstream ofs;
         ofs.open(filename, std::ofstream::out | std::ofstream::trunc);
         ofs.close();
@@ -32,7 +32,7 @@ public:
 
     ~TapeEmulationSorter() = default;
 
-    void sortTape(std::string input, std::string output) {
+    void sortTape(const std::string& input, const std::string& output) {
         clearFile("../tapes/" + output);
         TapeEmulationController inputController(input, _cfg);
         TapeEmulationController outputController(output, _cfg);
